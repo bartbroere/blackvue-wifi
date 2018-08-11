@@ -9,7 +9,7 @@ with open('requirements.in', 'r') as requirements:
                     dependency[0] != '#']
 
 setup(
-    name='blackvue_gps',
+    name='blackvue_wifi',
     version='2018.8.11',
     url='https://github.com/bartbroere/blackvue-wifi/',
     author='Bart Broere',
