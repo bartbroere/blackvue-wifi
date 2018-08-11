@@ -49,7 +49,6 @@ class BlackVueClient:
         lines = self.get('blackvue_vod.cgi').text.split('\n')
         version, recordings = lines[0], lines[1:]
         recordings = [recording.split(',') for recording in recordings]
-        print(recordings)
         recordings = [recording[0].split(":")[1] for recording in
                       recordings[:-1]]
         return recordings
@@ -73,7 +72,6 @@ class BlackVueClient:
 
         :return:
         """
-        # return self.upload
 
     def get_dashcam_metadata(self):
         """
@@ -111,8 +109,16 @@ class BlackVueClient:
 
 
 if __name__ == "__main__":
-    BlackVueClient(config=confidence.Configuration(
+    client = BlackVueClient(config=confidence.Configuration(
         confidence.Configuration({'endpoint': '10.99.77.1'}),
         confidence.load_name('blackvue'),
-        confidence.Configuration(docopt(__doc__)))
-    )
+        confidence.Configuration(docopt(__doc__))
+    ))
+    options = docopt(__doc__)
+    if options['--download-all-recordings']:
+        client.download_all_recordings(out=options['<foldername>'])
+    if options['--download-missing-recordings']:
+        if options['--continuously']:
+            print("Continous syncing will be included in the next version")
+        else:
+            print("Incremental downloads will be included in the next version")
