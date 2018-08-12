@@ -108,7 +108,7 @@ class BlackVueClient:
                              *args, **kwargs)
 
 
-if __name__ == "__main__":
+def main():
     client = BlackVueClient(config=confidence.Configuration(
         confidence.Configuration({'endpoint': '10.99.77.1'}),
         confidence.load_name('blackvue'),
@@ -122,3 +122,7 @@ if __name__ == "__main__":
             print("Continous syncing will be included in the next version")
         else:
             print("Incremental downloads will be included in the next version")
+
+
+if __name__ == "__main__":
+    main()

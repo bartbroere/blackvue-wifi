@@ -10,7 +10,7 @@ with open('requirements.in', 'r') as requirements:
 
 setup(
     name='blackvue_wifi',
-    version='2018.8.11',
+    version='2018.8.12',
     url='https://github.com/bartbroere/blackvue-wifi/',
     author='Bart Broere',
     author_email='maiil@bartbroere.eu',
