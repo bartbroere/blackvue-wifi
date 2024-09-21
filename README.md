@@ -1,4 +1,3 @@
-![BCH compliance](https://bettercodehub.com/edge/badge/bartbroere/blackvue-wifi?branch=master)
 ![Release](https://img.shields.io/pypi/v/blackvue-wifi.svg)
 ![Pre-release](https://img.shields.io/github/release/bartbroere/blackvue-wifi/all.svg)
 ![Licence](https://img.shields.io/pypi/l/blackvue-wifi.svg)
